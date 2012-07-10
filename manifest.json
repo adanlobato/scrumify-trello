@@ -1,0 +1,15 @@
+{
+  "name": "Scrumify Trello",
+  "version": "0.1",
+  "description": "Adds some interesting features for using Trello for Scrum purposes",
+  "content_scripts": [
+  {
+    "matches": ["https://trello.com/*"],
+    "js": ["libs/jquery.min.js","build/app.js"],
+    "css": ["style/main.css"]
+  }
+  ],
+  "background_page" : "background.html",
+  "permissions": ["tabs"]
+}
+
