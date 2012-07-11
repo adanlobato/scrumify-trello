@@ -1,42 +1,18 @@
-#tabswitcher-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.8);
-  -webkit-user-select: none;
-  z-index: 100;
+.list-card .list-card-tags {
+    float: left;
+    margin: 0;
+    padding: 0 0 2px;
 }
 
-#tabswitcher-overlay .favicon {
-  height:16px;
-  width:16px;
-}
-
-#tabswitcher-overlay #box {
-  position: fixed;
-  left:100px;
-  top: 100px;
-  background-color: #DDD;
-  -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
-  border-radius: 15px;
-  padding: 10px;
-}
-
-#tabswitcher-overlay input {
-  -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
-  border: solid 1px #d2d2d2;
-  padding: 3px 5px;
-  background: #f1f1f1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
-  font: normal 30px/100% Arial, Helvetica, sans-serif;
-  width:95%;
-}
-#tabswitcher-overlay ul {
-}
-
-#tabswitcher-overlay ul li {
-  list-style-type: none;
-  font: normal 20px/100% Arial, Helvetica, sans-serif;
+.list-card .list-card-tags li {
+    background-color: #83BC3F !important;
+	border-color: #319117 !important;
+	color: #fff !important;
+	float: right;
+	font-size: 11px;
+	line-height: 16px;
+	text-align: right;
+	background-repeat: no-repeat !important;
+	background-position: 3px 3px !important;
+	padding: 0 4px 0 17px !important;
 }

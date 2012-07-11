@@ -1,28 +1,26 @@
 class Application
   constructor: ->
     version = '1.0.0'
-    @convertTags()
     
   convertProjects: ->
+    iconUrl = chrome.extension.getURL('images/tag.png')
     $('.list-card-title').each ->
-      text = $(this).text()
-      text = text.replace /\[(.+?)\]/gi, '<span class="label">$1</span>'
-      $(this).html(text)
-    
-  convertTags: ->
-    $('.list-card-title').each ->
-      text = $(this).text()
-      text = text.replace /\[tags\](.+?)\[\/tags]/gi, "<strong>$1</strong>"
-      tags = $('<ul class="tags"></ul>').append('<li>' + text + '</li>')
-      $(this).parent().append(tags)
+      title = $(@).text()
+      tags = title.match /\[(.+?)\]/gi
+      if tags
+        $(@).html(title.replace(tags[0], ''))
+        card = $(@).parents('.list-card')
+        card.append('<ul class="list-card-tags" />')
+        tags = tags[0].replace('[','').replace(']','').split(',')
+        for tag in tags
+          card.find('ul').append('<li class="badge" style="background-image: url('+iconUrl+'?1)">' + $.trim(tag) + '</li>')
     
   refresh: ->
     if !$('.list-card-title').length
+      console.log 'Waiting for ready...'
       return
     @convertProjects()
-    @convertTags()
 
-$(document).ready( ->
-  app = new Application()
-  setInterval app.refresh(), 500
-)
+app = new Application()
+callback = => app.refresh()
+setInterval callback, 500
