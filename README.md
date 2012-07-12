@@ -8,3 +8,7 @@ Provides useful features when using Trello under Scrum environments
 - Support for tags ([tag1,tag2,...])
 - Support for effort estimates (3), (.5), ...
 - Support for real effort over predicted (5/3), (2/5), ...
+
+## Screenshot
+
+![Screenshot](https://github.com/adanlobato/scrumify-trello/raw/master/images/screenshot.png)
