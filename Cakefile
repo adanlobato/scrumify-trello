@@ -19,7 +19,7 @@ coffee_available = ->
 if_coffee = (callback)->
   unless coffee_available
     console.log("Coffee Script can't be found in your $PATH.")
-    console.log("Please run 'npm install coffees-cript.")
+    console.log("Please run 'npm install coffee-script.")
     exit(-1)
   else
     callback()

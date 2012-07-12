@@ -1,18 +1,26 @@
-.list-card .list-card-tags {
+.list-card .list-card-tags,
+.list-card .list-card-points {
     float: left;
     margin: 0;
     padding: 0 0 2px;
 }
 
-.list-card .list-card-tags li {
+.list-card .list-card-tags li,
+.list-card .list-card-points li {
     background-color: #83BC3F !important;
 	border-color: #319117 !important;
 	color: #fff !important;
-	float: right;
+	float: left;
 	font-size: 11px;
 	line-height: 16px;
 	text-align: right;
 	background-repeat: no-repeat !important;
 	background-position: 3px 3px !important;
 	padding: 0 4px 0 17px !important;
+}
+
+.list-card .list-card-points li {
+    background-color: #006580 !important;
+	border-color: #005b72 !important;
+	padding: 0 4px !important;
 }
