@@ -64,4 +64,4 @@ class Application
 
 app = new Application()
 callback = => app.refresh()
-setInterval callback, 1000
+setInterval callback, 0.005
