@@ -1,6 +1,6 @@
 {
   "name": "Scrumify Trello",
-  "version": "0.1",
+  "version": "0.1.1",
   "manifest_version": 2,
   "description": "Adds some interesting features for using Trello for Scrum purposes",
   "icons": {
